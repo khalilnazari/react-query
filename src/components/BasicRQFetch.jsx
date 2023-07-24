@@ -35,9 +35,31 @@ import { useQuery } from "react-query";
 const fetchSuperheroes = () => axios.get("http://localhost:4000/superheroes");
 
 const BasicRQFetch = () => {
+  const rqOptions = {
+    // default catchTime is 5min, but it can changed to a desired time like 5sec
+    // cacheTime: 5000,
+    //
+    // Default staleTime is 0sec, but it can changed like below to 30sec
+    // staleTime: 30000,
+    //
+    // refetch
+    // refetchOnMount: true, // false | true | 'always'
+    //
+    // auto fetch when focus on window
+    // refetchOnWindowFocus: true, // false, true, 'alawys'
+    //
+    // Polling data : fetch data at regular intervals (when focus on window)
+    // refetchInterval: 2000, // every 2sec fetch data
+    //
+    // Polling data: fetch data at regular intervals (in background )
+    // refetchIntervalInBackground: false, // true, false, 'always'
+    //
+  };
+
   const { data, isLoading, isError, error } = useQuery(
     "super-heroes",
-    fetchSuperheroes
+    fetchSuperheroes,
+    rqOptions
   );
 
   if (isLoading) return <div>Loading...</div>;
