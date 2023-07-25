@@ -1,10 +1,8 @@
 import React from "react";
 import { useFetchSuperheroDetail } from "./../hooks/useFetchSuperheroDetail";
-import { useParams, useRoutes } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const SuperHero = () => {
-  // const route = useRoutes();
-  // console.log(route);
   const params = useParams();
   const { isLoading, isError, error, data } = useFetchSuperheroDetail(
     params.heroId
