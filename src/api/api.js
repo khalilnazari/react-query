@@ -13,3 +13,11 @@ export const superHerosApi = () => {
 export const fetchDynamicHero = (id) => {
   return axios.get(`${BASE_URL}/superheroes/${id}`);
 };
+
+export const userApi = (email) => {
+  return axios.get(`${BASE_URL}/users/${email}`);
+};
+
+export const channelApi = (channelId) => {
+  return axios.get(`${BASE_URL}/channels/${channelId}`);
+};

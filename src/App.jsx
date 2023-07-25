@@ -13,6 +13,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import ParallelQuery from "./components/ParallelQuery";
 import DynamicParallelQuery from "./pages/DynamicParallelQuery";
+import DependentQuery from "./pages/DependentQuery";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -33,6 +34,10 @@ function App() {
         <Route
           path="/dynamic-parallel-query"
           element={<DynamicParallelQuery heroIds={[1, 3]} />}
+        />
+        <Route
+          path="/dependent-query"
+          element={<DependentQuery email="vishwas@example.com" />}
         />
         <Route path="*" element={<div>Not found...</div>} />
       </Routes>
