@@ -21,3 +21,7 @@ export const userApi = (email) => {
 export const channelApi = (channelId) => {
   return axios.get(`${BASE_URL}/channels/${channelId}`);
 };
+
+export const colorsApi = (pageNumber) => {
+  return axios.get(`${BASE_URL}/colors?_limit=2&_page=${pageNumber}`);
+};

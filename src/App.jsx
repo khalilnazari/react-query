@@ -14,6 +14,7 @@ import Home from "./pages/Home";
 import ParallelQuery from "./components/ParallelQuery";
 import DynamicParallelQuery from "./pages/DynamicParallelQuery";
 import DependentQuery from "./pages/DependentQuery";
+import PaginatedQuery from "./pages/PaginatedQuery";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -39,6 +40,7 @@ function App() {
           path="/dependent-query"
           element={<DependentQuery email="vishwas@example.com" />}
         />
+        <Route path="/paginated-query" element={<PaginatedQuery />} />
         <Route path="*" element={<div>Not found...</div>} />
       </Routes>
     </div>
